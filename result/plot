@@ -1,0 +1,9 @@
+#!/bin/bash
+echo -e "
+set term post eps color
+set output 'result.eps'
+set xlabel('x')
+set ylabel('y')
+set size 1,1
+plot \"< awk '{if(\$3 == \\\"0\\\") print}' point.dat\" u 1:2 t \"0\" w p pt 1,\"< awk '{if(\$3 == \\\"1\\\") print}' point.dat\" u 1:2 t \"1\" w p pt 1,\"< awk '{if(\$3 == \\\"2\\\") print}' point.dat\" u 1:2 t \"2\" w p pt 1,\"< awk '{if(\$3 == \\\"3\\\") print}' point.dat\" u 1:2 t \"3\" w p pt 1,\"< awk '{if(\$3 == \\\"4\\\") print}' point.dat\" u 1:2 t \"4\" w p pt 1,\"< awk '{if(\$3 == \\\"5\\\") print}' point.dat\" u 1:2 t \"5\" w p pt 2,\"< awk '{if(\$3 == \\\"6\\\") print}' point.dat\" u 1:2 t \"6\" w p pt 2,\"< awk '{if(\$3 == \\\"7\\\") print}' point.dat\" u 1:2 t \"7\" w p pt 2,\"< awk '{if(\$3 == \\\"8\\\") print}' point.dat\" u 1:2 t \"8\" w p pt 2,\"< awk '{if(\$3 == \\\"9\\\") print}' point.dat\" u 1:2 t \"9\" w p pt 2,\"< awk '{if(\$3 == \\\"10\\\") print}' point.dat\" u 1:2 t \"10\" w p pt 3,\"< awk '{if(\$3 == \\\"11\\\") print}' point.dat\" u 1:2 t \"11\" w p pt 3,\"< awk '{if(\$3 == \\\"12\\\") print}' point.dat\" u 1:2 t \"12\" w p pt 3,\"< awk '{if(\$3 == \\\"13\\\") print}' point.dat\" u 1:2 t \"13\" w p pt 3,\"< awk '{if(\$3 == \\\"14\\\") print}' point.dat\" u 1:2 t \"14\" w p pt 3,\"< awk '{if(\$3 == \\\"15\\\") print}' point.dat\" u 1:2 t \"15\" w p pt 3
+" | gnuplot

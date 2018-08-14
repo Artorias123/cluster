@@ -1,0 +1,32 @@
+FILENAME:
+s1.txt
+
+PATH:
+./clusterdata
+
+CLUSTER NUMBER:
+15
+
+POINT NUMBER:
+5000
+
+
+METHOD:
+2
+//0:K-Means,1:Fuzzy C-Means,2:Gaussian Mixed Model
+
+DIMENSION:
+2
+
+PRESION:
+1e-5
+
+FSFDP:
+1
+//1:use Fast search and find density peaks initialize centor point,0:not use
+
+FSFDP JUDGE DISTANCE:
+4000
+
+ITERATION NUMBER:
+100
